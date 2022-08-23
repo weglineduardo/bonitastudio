@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+ <head> 
+  <title>apiExtensionDatasourceViewer</title> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="css/widget.css"> 
+  <link rel="stylesheet" href="../theme/theme.css"> 
+  <script src="js/vendor.min.js"></script> 
+  <script src="js/generator.min.js"></script> 
+  <!-- assets attached to the page --> 
+  <!-- widget need to be injected at runtime --> 
+  <script src="widgets/pbTitle/pbTitle.js"></script> 
+  <script src="widgets/customRestApiCall/customRestApiCall.js"></script> 
+  <script src="widgets/pbSelect/pbSelect.js"></script> 
+  <script src="widgets/pbText/pbText.js"></script> 
+ </head> 
+ <body ng-app="org.bonitasoft.pagebuilder.generator" pb-model="c8e846d1-9336-4190-bc55-adb7175a07e1"> 
+  <div class="container-fluid"> 
+   <div class="row"> 
+    <div class="component col-lg-12  col-md-12  col-sm-12  col-xs-12 " pb-property-values="90b08c92-891b-4ec8-8b78-45b85024da91"> 
+     <div ng-if="!properties.hidden">
+      <pb-title></pb-title>
+     </div> 
+    </div> 
+   </div> 
+   <div class="row"> 
+    <div class="component col-lg-12  col-md-12  col-sm-12  col-xs-12 " pb-property-values="9c08e890-1bb6-4773-9d74-8d0225f2f374"> 
+     <div ng-if="!properties.hidden">
+      <pb-select></pb-select>
+     </div> 
+    </div> 
+   </div> 
+   <div class="row"> 
+    <div class="component col-lg-12  col-md-12  col-sm-12  col-xs-12 " pb-property-values="83362852-fc2c-421e-a6b4-beec6b5c44f1"> 
+     <div ng-if="!properties.hidden">
+      <custom-rest-api-call></custom-rest-api-call>
+     </div> 
+    </div> 
+   </div> 
+   <div class="row"> 
+    <div class="component col-lg-12  col-md-12  col-sm-12  col-xs-12 " pb-property-values="ec1fbb95-5345-4d55-af4f-45ce7a13f63e"> 
+     <div ng-if="!properties.hidden">
+      <pb-text></pb-text>
+     </div> 
+    </div> 
+   </div> 
+   <script>angular.module('org.bonitasoft.pagebuilder.generator.services').factory('modelPropertiesFactory', function() {
+  var resources = {};
+  return {
+    get: function(uuid) {
+      return resources[uuid];
+    }
+  };
+});
+</script> 
+   <script>angular.module('org.bonitasoft.pagebuilder.generator.services').factory('dataModelFactory', function() {
+  var resources = {};
+  resources['c8e846d1-9336-4190-bc55-adb7175a07e1'] =  {"apiExtensions":{"type":"json","value":"[\n    {\n        \"description\": \"Call to getClients query\",\n        \"method\": \"GET\",\n        \"pathTemplate\": \"sqlExample\",\n        \"permissions\": \"demoPermission\",\n        \"queryString\": \"queryId=getClients\"\n    },\n    {\n        \"description\": \"Call to getClientsByCountry with parameter\",\n        \"method\": \"GET\",\n        \"pathTemplate\": \"sqlExample\",\n        \"permissions\": \"demoPermission\",\n        \"queryString\": \"queryId=getClientsByCountry&country=France\"\n    }\n]","exposed":false},"currentApi":{"type":"json","value":"{}","exposed":false},"apiUrl":{"type":"url","value":"../API/extension/sqlExample","exposed":false}};
+  return {
+    get: function(uuid) {
+      return resources[uuid];
+    }
+  };
+});
+</script> 
+   <script>angular.module('org.bonitasoft.pagebuilder.generator.services').factory('modelPropertiesFactory', function() {
+  var resources = {};
+  return {
+    get: function(uuid) {
+      return resources[uuid];
+    }
+  };
+});
+</script> 
+   <script>angular.module('org.bonitasoft.pagebuilder.generator.services').factory('propertyValuesFactory', function() {
+  var resources = {};
+  resources['9c08e890-1bb6-4773-9d74-8d0225f2f374'] =  {"cssClasses":{"type":"constant","value":""},"hidden":{"type":"constant","value":false},"disabled":{"type":"constant","value":false},"required":{"type":"constant","value":false},"labelHidden":{"type":"constant","value":false},"label":{"type":"constant","value":"Choose a REST API example"},"labelPosition":{"type":"constant","value":"top"},"labelWidth":{"type":"constant","value":6},"placeholder":{"type":"constant","value":"Select an option"},"availableValues":{"type":"data","value":"apiExtensions"},"value":{"type":"data","value":"currentApi"},"displayedKey":{"type":"constant","value":"description"},"returnedKey":{"type":"constant","value":null}};
+  resources['ec1fbb95-5345-4d55-af4f-45ce7a13f63e'] =  {"cssClasses":{"type":"constant","value":""},"hidden":{"type":"constant","value":true},"text":{"type":"data","value":"currentApi | json"},"alignment":{"type":"constant","value":"left"}};
+  resources['83362852-fc2c-421e-a6b4-beec6b5c44f1'] =  {"cssClasses":{"type":"constant","value":""},"hidden":{"type":"constant","value":false},"method":{"type":"data","value":"currentApi.method"},"pathTemplate":{"type":"data","value":"currentApi.pathTemplate"},"description":{"type":"data","value":"currentApi.Description"},"queryString":{"type":"data","value":"currentApi.queryString"}};
+  resources['90b08c92-891b-4ec8-8b78-45b85024da91'] =  {"cssClasses":{"type":"constant","value":""},"hidden":{"type":"constant","value":false},"text":{"type":"constant","value":"REST API extension overview"},"level":{"type":"constant","value":"Level 2"},"alignment":{"type":"constant","value":"left"}};
+  return {
+    get: function(uuid) {
+      return resources[uuid];
+    }
+  };
+});
+</script> 
+  </div>   
+ </body>
+</html>
